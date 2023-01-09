@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log in</title>
+    <style>
+        body {
+            margin: 0px;
+            padding: 0px;
+            font-family: sans-serif;
+            background-image: url(https://cdn.pixabay.com/photo/2017/05/11/11/15/workplace-2303851__480.jpg);
+        }
+
+        .container {
+            display: grid;
+            grid-template-rows: 300px;
+            grid-template-columns: 400px;
+            place-content: center;
+            place-items: center;
+            min-height: 100vh;
+        }
+
+        .main {
+            display: grid;
+            place-items: center;
+            place-content: center;
+            background-color: rgba(32, 31, 31, 0.450);
+            box-shadow: 2px 2px 3px 3px yellow;
+            padding: 20px;
+            height: 400px;
+            width: 300px;
+            border-radius: 20px;
+        }
+
+        h1 {
+            color: #ffffff;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 20px;
+            background-color: rgba(32, 31, 31, 0.450);
+            border: 3px solid yellow;
+
+        }
+
+        input:hover {
+            border: 3px solid #1135ff;
+        }
+
+        #submit {
+            color: #ffffff;
+            width: 100px;
+            border-radius: 10px;
+            border: 2px solid yellow;
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="main">
+            <h1>Log In</h1>
+            <input type="text" id="username" placeholder="User Name">
+            <input type="password" id="password" placeholder="Enter Password">
+            <input type="button" id="submit" value="Log In">
+        </div>
+    </div>
+
+    <script>
+        let button = document.getElementById('submit')
+        function validate(){
+            let username = document.getElementById('username').value;
+            let password = document.getElementById('password').value;
+
+            if(username == 'admin' && password == 'admin'){
+                alert('Log in successfuly !')
+            }
+            else{
+                alert('Log in failed')
+            }
+        }
+        button.addEventListener('click', validate)
+    </script>
+</body>
+
+</html>
